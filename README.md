@@ -33,10 +33,10 @@ default: &default
   username: postgres
 ```
 
-Build and start the project:
+Build the project:
 
 ```sh
-docker-compose up -d --build
+docker-compose build
 ```
 
 Create the database and run the migrations:
@@ -44,6 +44,12 @@ Create the database and run the migrations:
 ```
 docker-compose run --rm web bin/rails db:create
 docker-compose run --rm web bin/rails db:migrate
+```
+
+Run the app:
+
+```sh
+docker-compose up -d
 ```
 
 Visit your application at localhost:3000.
