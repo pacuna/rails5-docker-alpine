@@ -20,7 +20,7 @@ cd rails-docker-alpine
 rails new . --database=postgresql
 ```
 
-Modify your database configuration to user the postgresql container configuration:
+Modify your database configuration to use the postgresql container configuration:
 
 ```yaml
 default: &default
