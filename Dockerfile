@@ -13,7 +13,7 @@ RUN apk add --no-cache --update ruby-nokogiri \
 WORKDIR /tmp
 ADD Gemfile /tmp/
 ADD Gemfile.lock /tmp/
-RUN bundle install --jobs 4 --retry 3
+RUN bundle install --jobs `expr $(cat /proc/cpuinfo | grep -c "cpu cores") - 1` --retry 3
 
 # Copy the application into the container
 COPY . /usr/src/app
