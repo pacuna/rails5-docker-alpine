@@ -17,7 +17,7 @@ Create a new Rails application under the repository directory
 
 ```sh
 cd rails-docker-alpine
-rails new --database=postgresql .
+rails new . --database=postgresql
 ```
 
 Modify your database configuration to user the postgresql container configuration:
@@ -42,7 +42,14 @@ docker-compose up -d --build
 Create the database and run the migrations:
 
 ```
-docker-compose run --rm web bin/rails db:setup
+docker-compose run --rm web bin/rails db:create
+docker-compose run --rm web bin/rails db:migrate
 ```
 
-Visit your application at localhost:3000
+Visit your application at localhost:3000.
+
+Tested with:
+- ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux]
+- Rails 5.0.6 (to create the new application)
+- Docker version 1.13.1, build fbadd78-unsupported
+- docker-compose version 1.17.1, build 6d101fb
