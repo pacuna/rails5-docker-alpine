@@ -9,13 +9,14 @@ RUN apk add --no-cache --update ruby-nokogiri \
                                 nodejs \
                                 tzdata
 
+ENV APP_PATH /usr/src/app
+
 # Different layer for gems installation
-WORKDIR /tmp
-ADD Gemfile /tmp/
-ADD Gemfile.lock /tmp/
-RUN bundle install --jobs 4 --retry 3
+WORKDIR $APP_PATH
+ADD Gemfile $APP_PATH
+ADD Gemfile.lock $APP_PATH
+RUN bundle install --jobs `expr $(cat /proc/cpuinfo | grep -c "cpu cores") - 1` --retry 3
 
 # Copy the application into the container
-COPY . /usr/src/app
-WORKDIR /usr/src/app
+COPY . APP_PATH
 EXPOSE 3000
