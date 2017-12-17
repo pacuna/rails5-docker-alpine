@@ -2,9 +2,8 @@ FROM ruby:2.4.2-alpine3.7
 LABEL maintainer="pabloacuna88@gmail.com"
 
 # Minimal requirements to run a Rails app
-RUN apk add --no-cache --update ruby-nokogiri \
+RUN apk add --no-cache --update build-base \
                                 linux-headers \
-                                build-base \
                                 postgresql-dev \
                                 nodejs \
                                 tzdata
