@@ -4,6 +4,7 @@ LABEL maintainer="pabloacuna88@gmail.com"
 # Minimal requirements to run a Rails app
 RUN apk add --no-cache --update build-base \
                                 linux-headers \
+                                git \
                                 postgresql-dev \
                                 nodejs \
                                 tzdata
