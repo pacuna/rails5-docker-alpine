@@ -55,7 +55,7 @@ docker-compose up -d
 Visit your application at localhost:3000.
 
 Tested with:
-- Ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux]
-- Rails 5.0.6 (to create the new application)
-- Docker version 1.13.1, build fbadd78-unsupported
-- Rocker-compose version 1.17.1, build 6d101fb
+- Ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+- Rails 5.2.1 (to create the new application)
+- Docker version 18.06.1-ce, build e68fc7a
+- Docker-compose version 1.22.0, build f46880fe

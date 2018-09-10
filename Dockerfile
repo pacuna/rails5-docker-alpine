@@ -1,4 +1,4 @@
-FROM ruby:2.4.2-alpine3.7
+FROM ruby:2.5.1-alpine3.7
 LABEL maintainer="pabloacuna88@gmail.com"
 
 # Minimal requirements to run a Rails app
