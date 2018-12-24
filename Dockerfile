@@ -1,5 +1,5 @@
-FROM ruby:2.5.1-alpine3.7
-LABEL maintainer="pabloacuna88@gmail.com"
+FROM ruby:2.5.3-alpine3.8
+LABEL maintainer="pacuna@pm.me"
 
 # Minimal requirements to run a Rails app
 RUN apk add --no-cache --update build-base \

@@ -56,6 +56,6 @@ Visit your application at localhost:3000.
 
 Tested with:
 - Ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
-- Rails 5.2.1 (to create the new application)
-- Docker version 18.06.1-ce, build e68fc7a
-- Docker-compose version 1.22.0, build f46880fe
+- Rails 5.2.2 (to create the new application)
+- Docker version 18.09.0, build 4d60db4
+- docker-compose version 1.23.1, build b02f1306
